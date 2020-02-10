@@ -1,2 +1,1 @@
-# Basic Wordpress Plugin
-
+TestPluginWP

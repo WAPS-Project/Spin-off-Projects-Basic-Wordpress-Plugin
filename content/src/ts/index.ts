@@ -1,0 +1,1 @@
+console.log('Hello World, im a Test Plugin');
