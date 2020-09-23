@@ -1,11 +1,11 @@
 <?php
 
 /*
-Plugin Name: Test Plugin WP
-Plugin URI: https://fearnixx.de
+Plugin Name: WAPS based test plugin
+Plugin URI: https://gitlab.com/waps
 Description: A brief description of the Plugin.
 Version: 1.0.0
-Author: JosunLP
+Author: Jonas Pfalzgraf
 Author URI: https://josunlp.de
 License: MIT
 */
@@ -14,8 +14,13 @@ License: MIT
 use PluginWPClass\ConfigLoader;
 use PluginWPClass\ScriptLoader;
 
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 include( plugin_dir_path( __FILE__ ) . 'class/ConfigLoader.class.php');
 include( plugin_dir_path( __FILE__ ) . 'class/ScriptLoader.class.php');
+include( plugin_dir_path( __FILE__ ) . 'class/JsonHandler.class.php');
 
 ConfigLoader::loadConfig(plugin_dir_path( __FILE__ ) . "config/");
 
@@ -34,4 +39,5 @@ function main() {
     $result = 'This is an Example Plugin';
     return $result;
 }
+
 add_shortcode(PLUGIN_NAME, 'main');
