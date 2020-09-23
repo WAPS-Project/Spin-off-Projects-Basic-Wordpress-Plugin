@@ -1,14 +1,21 @@
 {
-  "head": {
-    "title": "configFile",
-    "version": "1.0.0"
-  },
-  "metaData": {
-    "charset": "utf8",
-    "language": "de_DE",
-    "plugin_name": "TestPluginWP",
-    "description": "Example WordPress Plugin",
-    "keywords": "PHP,HTMl,XML,JavaScript,CSS,APP",
-    "author": "Jonas Pfalzgraf"
-  }
+    "head": {
+        "title": "configFile",
+        "version": "1.0.0",
+        "plugin_name": "TestPluginWP",
+        "framework_info": {
+            "framework_name": "WAPS-Framework-WordPressPlugin",
+            "framework_version": "1.0.0",
+            "framework_repository": "https://gitlab.com/webapp-php-sample/framework",
+            "framework_wiki": "https://waps-framework.info"
+        }
+
+    },
+    "metaData": {
+        "charset": "utf8",
+        "language": "de_DE",
+        "description": "Example WordPress Plugin",
+        "keywords": "PHP,HTMl,XML,JavaScript,CSS,APP",
+        "author": "Jonas Pfalzgraf"
+    }
 }

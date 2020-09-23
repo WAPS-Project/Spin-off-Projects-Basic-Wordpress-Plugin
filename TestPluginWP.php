@@ -10,33 +10,20 @@ Author URI: https://josunlp.de
 License: MIT
 */
 
-
-use PluginWPClass\ConfigLoader;
-use PluginWPClass\ScriptLoader;
+include(plugin_dir_path(__FILE__) . 'core.loader.php');
 
 if (!defined('ABSPATH')) {
     exit;
 }
 
-include( plugin_dir_path( __FILE__ ) . 'class/ConfigLoader.class.php');
-include( plugin_dir_path( __FILE__ ) . 'class/ScriptLoader.class.php');
-include( plugin_dir_path( __FILE__ ) . 'class/JsonHandler.class.php');
-
-ConfigLoader::loadConfig(plugin_dir_path( __FILE__ ) . "config/");
-
-function headScriptLoading() {
-    ScriptLoader::headScripts(plugin_dir_path( __FILE__ ));
-}
-add_action( 'wp_head', 'headScriptLoading' );
-
-function footerScriptLoading() {
-    ScriptLoader::footerScripts(plugin_dir_path( __FILE__ ));
-}
-add_action( 'wp_footer', 'footerScriptLoading' );
-
 function main() {
+
+    wp_register_style('custom_css', plugins_url( '/content/dist/css/style.css', __FILE__));
+    wp_enqueue_style('custom_css');
+
     wp_enqueue_script( 'custom_js', plugins_url( '/content/dist/js/index.js', __FILE__ ));
-    $result = 'This is an Example Plugin';
+    $result = '<div id="app">Your browseer does not support JavaScript!</div>';
+    
     return $result;
 }
 
