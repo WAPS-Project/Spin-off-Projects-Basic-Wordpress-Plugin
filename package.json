@@ -6,7 +6,8 @@
     "scripts": {
         "style": "sass content/src/sass/style.sass content/dist/css/style.css",
         "js": "tsc",
-        "build": "npm run style && npm run js"
+        "build": "npm run style && npm run js",
+        "deply": "npm run build && deploy.sh"
     },
     "author": "Jonas Pfalzgraf",
     "license": "MIT",
