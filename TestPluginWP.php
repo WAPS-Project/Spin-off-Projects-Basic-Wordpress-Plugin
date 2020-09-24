@@ -22,7 +22,7 @@ function main() {
     wp_enqueue_style('custom_css');
 
     wp_enqueue_script( 'custom_js', plugins_url( '/content/dist/js/index.js', __FILE__ ));
-    $result = '<div id="app">Your browseer does not support JavaScript!</div>';
+    $result = '<div id="app">Your browser does not support JavaScript!</div>';
     
     return $result;
 }

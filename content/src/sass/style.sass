@@ -2,4 +2,21 @@
 @import "scaleMixin"
 
 #app
-  background-color: $seccond-color !important
+  background-color: #eaeaea !important
+  border-color: $main-menue-background-color !important
+  border-radius: 3rem
+  box-shadow: 5px 10px 7px
+  padding: 1.5rem
+  user-select: none
+
+  @include respond-to(medium-screens)
+    width: 20rem
+    height: 17rem
+
+  @include respond-to(wide-screens)
+    width: 20rem
+    height: 17rem
+
+  @include respond-to(handhelds)
+    width: 15rem
+    height: 15rem
