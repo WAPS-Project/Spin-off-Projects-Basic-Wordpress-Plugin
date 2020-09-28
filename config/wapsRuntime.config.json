@@ -1,0 +1,9 @@
+{
+    "head": {
+        "title": "configFile"
+    },
+    "configData": {
+        "Name": "WAPS",
+        "Type": "Plugin"
+    }
+}
