@@ -14,9 +14,13 @@ class AdminPage
 
 		if(Helper::checkRequest("post", "Name") && Helper::checkRequest("post", "Type")) {
 			$runTimeConfig = new RuntimeConfig();
+			$payload = [
+				"Name" => Helper::checkRequest("post", "Name"),
+				"Type" => Helper::checkRequest("post", "Type"),
+				"Cool_Number" => Helper::checkRequest("post", "Cool_Number")
+			];
 
-			$runTimeConfig::addToBase(["Name" => Helper::checkRequest("post", "Name")]);
-			$runTimeConfig::addToBase(["Type" => Helper::checkRequest("post", "Type")]);
+			$runTimeConfig::addToBase($payload);
 
 			file_put_contents($pageUrl, $runTimeConfig::getBase());
 		}

@@ -19,6 +19,10 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+if($_POST) {
+	header("Refresh:0");
+}
+
 add_action('admin_menu', 'test_plugin_setup_menu');
 
 function test_plugin_setup_menu()

@@ -47,21 +47,20 @@ export class AdminPanel {
 		const form = document.createElement("form")
 		const data = this.getSessionStorage()
 		const submit = document.createElement("button")
+		const divider = document.createElement("hr")
 
 		submit.type = "submit"
 		submit.innerHTML = "Submit"
 		submit.className = "btn-success"
+		form.id = "wapsForm"
+		form.action = <string>Utils.getCurrentAbsoluteSiteUrl() + "?page=waps-plugin"
+		form.method = "post"
 
 		for (let item in data.configData) {
 			let value = data.configData[item]
 			let div = document.createElement("div")
 			let label = document.createElement("label")
 			let input = document.createElement("input")
-			let divider = document.createElement("hr")
-
-			form.id = "wapsForm"
-			form.action = <string>Utils.getCurrentAbsoluteSiteUrl() + "?page=waps-plugin"
-			form.method = "post"
 
 			div.className = "wapsFormGroup"
 			label.textContent = item
@@ -77,8 +76,15 @@ export class AdminPanel {
 		}
 
 		form.appendChild(submit)
-
 		return form;
+	}
+
+	private wait(ms:number) {
+		var start = new Date().getTime();
+		var end = start;
+		while (end < start + ms) {
+			end = new Date().getTime();
+		}
 	}
 }
 
