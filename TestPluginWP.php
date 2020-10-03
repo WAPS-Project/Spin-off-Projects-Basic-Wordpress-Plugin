@@ -11,6 +11,7 @@ License: MIT
 */
 
 use PluginWPClass\AdminPage;
+use PluginWPClass\App;
 use PluginWPClass\ConfigLoader;
 
 include(plugin_dir_path(__FILE__) . 'core.loader.php');
@@ -45,9 +46,7 @@ function waps_scripts() {
 
 function main() {
 	waps_scripts();
-    $result = '<div id="app">Your browser does not support JavaScript!</div>';
-
-    return $result;
+    return App::runPage(ConfigLoader::returnConfig(plugin_dir_path(__FILE__) . "config/wapsRuntime.config.json"));
 }
 
 add_action('admin_enqueue_scripts', 'waps_scripts');

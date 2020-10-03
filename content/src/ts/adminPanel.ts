@@ -4,6 +4,9 @@ import { Utils } from "./utils"
 export class AdminPanel {
 	constructor() {
 		const adminPanelObj = <HTMLDivElement>document.getElementById("wapsAdminPanel")
+		if(!adminPanelObj) {
+			return
+		}
 		adminPanelObj.innerHTML = ""
 		this.header(adminPanelObj)
 		this.body(adminPanelObj)
