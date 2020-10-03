@@ -3,9 +3,11 @@ import { AdminPanel } from "./adminPanel";
 class Main {
 	constructor() {
 
-		if (document.getElementById("app")) {
-			console.log("Hello world, this is WAPS app!")
-			const app = <HTMLDivElement>document.getElementById("app")
+		if (document.getElementById("wapsApp")) {
+			const sessionStorage = this.getSessionStorage()
+
+			console.log("Hello world, this is " + sessionStorage.configData.Name + " app!")
+			const app = <HTMLDivElement>document.getElementById("wapsApp")
 			this.main(app);
 		}
 
@@ -13,6 +15,7 @@ class Main {
 	}
 
 	private main(app:HTMLDivElement) {
+		const sessionStorage = this.getSessionStorage()
 		var logo = document.createElement("img")
 		var text = document.createElement("p")
 
@@ -22,12 +25,19 @@ class Main {
 		text.className = "waps_plugin_text"
 		text.style.fontFamily = "Ubuntu"
 
-		text.innerHTML = "Hello World, this is your WAPS Plugin"
+		text.innerHTML = "Hello World, this is your " + sessionStorage.configData.Name + " Plugin"
 
 		app.innerHTML = ""
 		app.appendChild(logo)
 		app.appendChild(text)
 		app.style.border = "solid 8px"
+	}
+
+	private getSessionStorage() {
+		let sessionString = <HTMLDivElement>document.getElementById("wapsAppStorage")
+		let obj = JSON.parse(sessionString.innerHTML);
+
+		return obj
 	}
 }
 

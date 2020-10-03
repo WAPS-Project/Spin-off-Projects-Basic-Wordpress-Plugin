@@ -1,1 +1,11 @@
-{"head":{"title":"configFile"},"configData":{"Name":"WAPS","Type":"Plugin","Cool_Number":"42"}}
+{
+    "head": {
+        "title": "configFile"
+    },
+    "configData": {
+        "Name": "WAPS",
+        "Type": "Plugin",
+        "Cool_Number": "42",
+        "Move": "To cool to fly"
+    }
+}

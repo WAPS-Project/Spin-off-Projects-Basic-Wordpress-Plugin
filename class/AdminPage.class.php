@@ -14,11 +14,14 @@ class AdminPage
 
 		if(Helper::checkRequest("post", "Name") && Helper::checkRequest("post", "Type")) {
 			$runTimeConfig = new RuntimeConfig();
-			$payload = [
-				"Name" => Helper::checkRequest("post", "Name"),
-				"Type" => Helper::checkRequest("post", "Type"),
-				"Cool_Number" => Helper::checkRequest("post", "Cool_Number")
-			];
+			foreach ($_POST as $key => $value) {
+				$payload[$key] = Helper::checkRequest("post", $key);
+			}
+			// $payload = [
+			// 	"Name" => Helper::checkRequest("post", "Name"),
+			// 	"Type" => Helper::checkRequest("post", "Type"),
+			// 	"Cool_Number" => Helper::checkRequest("post", "Cool_Number")
+			// ];
 
 			$runTimeConfig::addToBase($payload);
 

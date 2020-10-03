@@ -36,7 +36,7 @@ class ConfigLoader
 			foreach ($files as $file) {
 				$fileParts = explode('.', $file);
 
-				if ($fileParts[0] === 'config' && $fileParts[1] === 'json') {
+				if (end($fileParts) === 'json') {
 					$config = file_get_contents($path . $file);
 					$configObj = json_decode($config, true, 512, JSON_THROW_ON_ERROR);
 
