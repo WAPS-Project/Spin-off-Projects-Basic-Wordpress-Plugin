@@ -1,6 +1,6 @@
 {
     "name": "basic_waps_plugin_wp",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A wordpress plugin blueprint, based on the WAPS framework (WAPS-framework.info)",
     "main": "content/dist/js/index.js",
     "scripts": {
@@ -13,20 +13,20 @@
     "author": "Jonas Pfalzgraf",
     "license": "MIT",
     "dependencies": {
-        "sass": "^1.26.11",
-        "typescript": "^3.9.7"
+        "sass": "^1.32.12",
+        "typescript": "^3.9.9"
     },
     "devDependencies": {
-        "@babel/cli": "^7.10.1",
-        "@babel/core": "^7.10.2",
-        "@babel/preset-env": "^7.10.2",
-        "@babel/preset-typescript": "^7.10.1",
-        "@types/node": "^12.12.43",
+        "@babel/cli": "^7.13.16",
+        "@babel/core": "^7.14.0",
+        "@babel/preset-env": "^7.14.0",
+        "@babel/preset-typescript": "^7.13.0",
+        "@types/node": "^12.20.11",
         "babel-core": "^6.26.3",
-        "babel-loader": "^8.0.6",
+        "babel-loader": "^8.2.2",
         "babel-preset-env": "^1.7.0",
         "ts-loader": "^6.2.1",
-        "webpack": "^4.43.0",
+        "webpack": "^4.46.0",
         "webpack-cli": "^3.3.11"
     }
 }
