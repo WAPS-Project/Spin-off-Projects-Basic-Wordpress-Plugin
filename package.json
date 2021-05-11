@@ -1,6 +1,6 @@
 {
     "name": "basic_waps_plugin_wp",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "A wordpress plugin blueprint, based on the WAPS framework (WAPS-framework.info)",
     "main": "content/dist/js/index.js",
     "scripts": {
@@ -19,9 +19,9 @@
     "devDependencies": {
         "@babel/cli": "^7.13.16",
         "@babel/core": "^7.14.0",
-        "@babel/preset-env": "^7.14.0",
+        "@babel/preset-env": "^7.14.1",
         "@babel/preset-typescript": "^7.13.0",
-        "@types/node": "^12.20.11",
+        "@types/node": "^12.20.12",
         "babel-core": "^6.26.3",
         "babel-loader": "^8.2.2",
         "babel-preset-env": "^1.7.0",
