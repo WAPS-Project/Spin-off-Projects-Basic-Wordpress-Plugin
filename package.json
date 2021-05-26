@@ -1,6 +1,6 @@
 {
     "name": "basic_waps_plugin_wp",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "A wordpress plugin blueprint, based on the WAPS framework (WAPS-framework.info)",
     "main": "content/dist/js/index.js",
     "scripts": {
